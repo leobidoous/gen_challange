@@ -27,26 +27,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
-  void dispose() {
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: DefaultAppBar(
         title: Text(
-          'Países',
+          'Filmes',
           style: Theme.of(context).textTheme.headline4?.copyWith(
                 color: Theme.of(context).textTheme.bodyText2?.color,
               ),
         ),
-        actions: [
-          InkWell(
-            onTap: () {},
-            child: const Icon(Icons.import_export_rounded),
-          ),
-        ],
       ),
       body: SafeArea(
         child: ScopedBuilder<HomeStore, Exception, List<MovieEntity>>(
@@ -56,12 +45,12 @@ class _HomePageState extends State<HomePage> {
               return Center(
                 child: ListEmpty(
                   padding: const EdgeInsets.all(16),
-                  message: 'Nenhum país encontrato',
+                  message: 'Nenhum filme encontrato.',
                   onPressed: () => store.getMovies(),
                 ),
               );
             }
-            return CountryList(store: store);
+            return MovieList(store: store);
           },
           onLoading: (_) {
             return Column(

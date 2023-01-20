@@ -6,9 +6,6 @@ import '../../infra/datasources/get_movies_datasource.dart';
 import '../../infra/models/movie_model.dart';
 
 class GetMoviesDatasource extends IGetMoviesDatasource {
-  final LoadJson instance;
-
-  GetMoviesDatasource({required this.instance});
 
   @override
   Future<Either<Exception, List<MovieEntity>>> call() async {
@@ -18,7 +15,7 @@ class GetMoviesDatasource extends IGetMoviesDatasource {
       try {
         return Right(
           (r['mcu'] as List)
-              .map((e) => MovieModel.fromJson(e).toEntity)
+              .map((e) => MovieModel.fromJson(e))
               .toList(),
         );
       } catch (e) {
