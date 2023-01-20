@@ -15,8 +15,7 @@ class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Smash Challenge',
-      // showPerformanceOverlay: true,
+      title: 'Gen Challenge',
       themeMode: ThemeMode.light,
       theme: LightTheme.theme,
       darkTheme: DarkTheme.theme,

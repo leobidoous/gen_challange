@@ -1,16 +1,18 @@
-# gen
+# GEN
 
-A new Flutter project.
+PROCESSO SELETIVO HANDS ON
 
-## Getting Started
+## SOBRE A SUA MISSÃO
 
-This project is a starting point for a Flutter application.
+Sua missão em nosso teste é mostrar em tela uma lista de registros recuperados de um mock API. Não se preocupe com layout, a lista apresentada em tela pode ser simples (apenas textos), a ideia é avaliar o planejamento da arquitetura e a forma que os princípios foram aplicados.
 
-A few resources to get you started if this is your first Flutter project:
+Um arquivo mock de extensão .json será enviado junto com o teste.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## O QUE VOCÊ NÃO PODE DEIXAR DE CONSIDERAR NESTE TESTE
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Projeto em Flutter de preferência utilizando a última versão lançada, e também em Null-Safety;
+* Clean Architecture e suas camadas Domain, Data e Presenter;
+* Princípios do SOLID na criação de suas classes;
+* Definir gerenciador de estado, rotas e injeção de dependência;
+* Se utilizar algum Package externo,então criar alguma abstração de forma a facilitar a troca no futuro;
+* Mock do arquivo.json para realizar a leitura da lista de registros;
